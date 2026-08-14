@@ -1,0 +1,9 @@
+#header {
+    grid-column: 2 / 3;
+    align-self: center;
+}
+
+.header-title {
+    font-size: 30px;
+    font-family: 'KGMissSteward', sans-serif;
+}

@@ -20,6 +20,7 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  height: 100vh;
 }
 
 img, picture, video, canvas, svg {
@@ -45,3 +46,29 @@ h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
+
+body {
+  display: grid;
+  grid-template-columns: 0.7fr 2fr;
+  grid-template-rows: 80px 1fr;
+}
+
+@font-face {
+    font-family: 'OldNewspaperTypes';
+    src: url('./assets/fonts/OldNewspaperTypes.woff2') format('woff2'),
+        url('./assets/fonts/OldNewspaperTypes.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KGMissSteward';
+    src: url('./assets/fonts/KGMissSteward.woff2') format('woff2'),
+        url('./assets/fonts/KGMissSteward.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+

@@ -11,8 +11,7 @@
    },
    plugins: [
      new HtmlWebpackPlugin({
-       title: 'Production',
-       template: "../src/template.html"
+       template: path.resolve(__dirname, "../src/template.html")
      }),
    ],
    output: {

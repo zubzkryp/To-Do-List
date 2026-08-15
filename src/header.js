@@ -8,8 +8,6 @@ export default function buildHeader() {
     const title = document.createElement('div')
     title.classList.add("header-title")
     header.appendChild(title)
-    title.textContent = " ToDo List"
-
-    const leftCorner = document.create
+    header.textContent = " ToDo List"
 
 }

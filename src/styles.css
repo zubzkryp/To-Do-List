@@ -49,8 +49,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   display: grid;
-  grid-template-columns: 0.7fr 2fr;
-  grid-template-rows: 80px 1fr;
+  grid-template-columns: 0.6fr 2fr;
 }
 
 @font-face {
@@ -71,4 +70,6 @@ body {
     font-display: swap;
 }
 
-
+#container {
+  grid-column: 2 / 3;
+}

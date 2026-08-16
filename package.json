@@ -13,7 +13,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open --config config/webpack.dev.js",
@@ -29,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/zubzkryp/To-Do-List/issues"
   },
-  "homepage": "https://github.com/zubzkryp/To-Do-List#readme"
+  "homepage": "https://github.com/zubzkryp/To-Do-List#readme",
+  "dependencies": {
+    "lucide": "1.31.0"
+  }
 }

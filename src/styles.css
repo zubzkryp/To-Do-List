@@ -49,8 +49,9 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   display: grid;
-  grid-template-columns: 0.6fr 1fr;
-  /* grid-template-rows: 1fr; */
+  grid-template-columns: 0.6fr 2fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
 }
 
 @font-face {
@@ -73,4 +74,6 @@ body {
 
 #container {
   grid-column: 2 / 3;
+  display: grid;
+  grid-template-rows: 70px 1fr;
 }

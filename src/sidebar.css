@@ -12,7 +12,7 @@
     border-radius: 25px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     display: grid;
-    grid-template-rows: 150px 40px 40px 40px 40px 1fr;
+    grid-template-rows: 150px 40px 40px 40px 120px 1fr 40px 60px;
     grid-template-columns: 30px 1fr 30px;
     padding-top: 20px;
     font-family: 'Montserrat';
@@ -59,7 +59,10 @@
 
 .today,
 .week,
-.upcoming {
+.upcoming,
+.add-project,
+.settings,
+.sign-out {
     border: none;
     background: none;
     font-size: 1.2rem;
@@ -78,8 +81,14 @@
     grid-row: 5 / 6;
     grid-column: 2 / 3;
     display: flex;
-    align-items: center;
+    align-items: start;
+    transform: translateY(5px);
 }
+
+.dashboard-week svg {
+    transform: translateY(5px);
+}
+
 
 .dashboard-upcoming,
 .dashboard-today,
@@ -89,7 +98,49 @@
 
 .dashboard-today svg,
 .dashboard-upcoming svg,
-.dashboard-week svg {
+.dashboard-week svg,
+.dashboard-settings svg {
     width: 20px;
     height: 20px;
+}
+
+.dashboard-project {
+    grid-row: 6 / 7;
+    grid-column: 2 / 3;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+
+.add-project {
+    font-size: 1rem;
+    transform: translateX(10px);
+}
+
+.dashboard-settings {
+    grid-column: 2 / 3;
+    grid-row: 7 / 8;
+    display: flex;
+    align-items: start;
+    gap: 5px;
+}
+
+.dashboard-settings svg {
+    transform: translateY(5px);
+}
+
+.dashboard-signout {
+    grid-column: 2 / 3;
+    grid-row: 8 / 9;
+    display: flex;
+    align-items: start;
+    gap: 5px;
+}
+
+.dashboard-signout svg {
+    transform: translateY(5px);
 }

@@ -1,5 +1,5 @@
 import './sidebar.css'
-import { createElement, Menu, ChevronsRight, ListChecks, Logs } from 'lucide'
+import { createElement, Menu, ChevronsRight, ListChecks, Logs, SlidersHorizontal, LogOut } from 'lucide'
 
 export default function buildSideBar() {
     const body = document.querySelector('body')
@@ -67,4 +67,39 @@ export default function buildSideBar() {
     week.textContent = "Week"
     dashboardWeek.appendChild(week)
 
+    //Project title
+    const dashboardProject = document.createElement('h3')
+    dashboardProject.textContent = "PROJECTS"
+    dashboardProject.classList.add('dashboard-project')
+    dashBoard.appendChild(dashboardProject)
+
+    // add project button
+    const projectButton = document.createElement('button')
+    projectButton.textContent = '+ Add Project'
+    projectButton.classList.add('add-project')
+    dashboardProject.appendChild(projectButton)
+    
+    // Settings
+    const dashboardSettings = document.createElement('div')
+    dashboardSettings.classList.add("dashboard-settings")
+    dashBoard.appendChild(dashboardSettings)
+    //buttons to view to settings
+    const settingIcon = createElement(SlidersHorizontal) // icon for settings text
+    dashboardSettings.appendChild(settingIcon)
+    const settings = document.createElement('button')
+    settings.classList.add("settings")
+    settings.textContent = "Settings"
+    dashboardSettings.appendChild(settings)
+
+    // Sign out
+    const dashboardSignOut= document.createElement('div')
+    dashboardSignOut.classList.add("dashboard-signout")
+    dashBoard.appendChild(dashboardSignOut)
+    //buttons to view to sign out
+    const signoutIcon = createElement(LogOut) // icon for sign out text
+    dashboardSignOut.appendChild(signoutIcon)
+    const signout = document.createElement('button')
+    signout.classList.add("sign-out")
+    signout.textContent = "Sign Out"
+    dashboardSignOut.appendChild(signout)
 }

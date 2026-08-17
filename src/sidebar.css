@@ -11,4 +11,85 @@
     background-color: #F4F4F4;
     border-radius: 25px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-rows: 150px 40px 40px 40px 40px 1fr;
+    grid-template-columns: 30px 1fr 30px;
+    padding-top: 20px;
+    font-family: 'Montserrat';
+}
+
+.dashboard-title {
+    display: flex;
+    justify-content: space-between;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+.dashboard-title svg {
+  
+    align-self: start;
+    transform: translateY(9px);
+}
+
+.dashboard-menu {
+    
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.dashboard-task {
+    font-size: 0.8rem;
+    font-weight: 600;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    letter-spacing: 5px;
+}
+
+.dashboard-upcoming {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    display: flex;
+    align-items: center;
+}
+
+.today {
+    transform: translateY(1px);
+}
+
+.today,
+.week,
+.upcoming {
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.dashboard-today {
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+    display: flex;
+    align-items: center;
+    
+}
+
+.dashboard-week {
+    grid-row: 5 / 6;
+    grid-column: 2 / 3;
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-upcoming,
+.dashboard-today,
+.dashboard-week {
+    gap: 10px;
+}
+
+.dashboard-today svg,
+.dashboard-upcoming svg,
+.dashboard-week svg {
+    width: 20px;
+    height: 20px;
 }

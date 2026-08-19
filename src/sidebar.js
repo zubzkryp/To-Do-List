@@ -32,16 +32,16 @@ export default function buildSideBar() {
     dashBoard.appendChild(dashboardTask)
 
     // upcoming 
-    const dashboardUpcoming = document.createElement('div')
-    dashboardUpcoming.classList.add("dashboard-upcoming")
-    dashBoard.appendChild(dashboardUpcoming)
+    const dashboardInbox = document.createElement('div')
+    dashboardInbox.classList.add("dashboard-inbox")
+    dashBoard.appendChild(dashboardInbox)
     //buttons to view list
-    const upcomingIcon = createElement(ChevronsRight) // icon for upcoming text
-    dashboardUpcoming.appendChild(upcomingIcon)
-    const upcoming = document.createElement('button')
-    upcoming.classList.add("upcoming")
-    upcoming.textContent = "Upcoming"
-    dashboardUpcoming.appendChild(upcoming)
+    const inboxIcon = createElement(ChevronsRight) // icon for upcoming text
+    dashboardInbox.appendChild(inboxIcon)
+    const inbox = document.createElement('button')
+    inbox.classList.add("inbox")
+    inbox.textContent = "Inbox"
+    dashboardInbox.appendChild(inbox)
 
     // today tasks
     const dashboardToday = document.createElement('div')
@@ -102,4 +102,6 @@ export default function buildSideBar() {
     signout.classList.add("sign-out")
     signout.textContent = "Sign Out"
     dashboardSignOut.appendChild(signout)
+
+    
 }

@@ -32,7 +32,6 @@
 }
 
 .dashboard-menu {
-    
     font-family: 'Montserrat';
     font-size: 1.5rem;
     font-weight: 700;
@@ -46,7 +45,7 @@
     letter-spacing: 5px;
 }
 
-.dashboard-upcoming {
+.dashboard-inbox {
     grid-row: 3 / 4;
     grid-column: 2 / 3;
     display: flex;
@@ -59,7 +58,7 @@
 
 .today,
 .week,
-.upcoming,
+.inbox,
 .add-project,
 .settings,
 .sign-out {
@@ -90,14 +89,14 @@
 }
 
 
-.dashboard-upcoming,
+.dashboard-inbox,
 .dashboard-today,
 .dashboard-week {
     gap: 10px;
 }
 
 .dashboard-today svg,
-.dashboard-upcoming svg,
+.dashboard-inbox svg,
 .dashboard-week svg,
 .dashboard-settings svg {
     width: 20px;

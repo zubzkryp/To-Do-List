@@ -10,6 +10,9 @@
 .content-addtask {
     display: flex;
     grid-row: 2 / 3;
-    
     transform: translateY(50px);
+}
+
+.print-tasks {
+    grid-row: 3 / 4;
 }

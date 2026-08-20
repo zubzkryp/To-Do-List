@@ -58,8 +58,20 @@ export default function buildContent() {
     form.appendChild(descriptionHolder)
     form.appendChild(dateHolder)
 
+    // submitting the form button
+    const submitBtn = document.createElement('button')
+    submitBtn.type = 'submit'
+    submitBtn.classList.add('submit-button')
+    form.appendChild(submitBtn)
 
+    // form.addEventListener('submit', () => {
 
+    // })
 
+    const printsTasks = document.createElement('div')
+    printsTasks.classList.add('print-tasks')
+    content.appendChild(printsTasks)
 }
+
+
 

@@ -84,6 +84,6 @@ body {
 #content {
   grid-column: 2 / 3;
   display: grid;
-  grid-template-rows: 70px 1fr;
+  grid-template-rows: 70px 80px 1fr;
 }
 

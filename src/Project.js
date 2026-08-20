@@ -1,4 +1,6 @@
-class Project {
+import ToDo from './ToDo'
+
+export default class Project {
     constructor() {
         this.tasks = []
     }
@@ -13,6 +15,10 @@ class Project {
         if (index > -1){
             this.tasks.splice(index, 1)
         }
+    }
+
+    completion() {
+        completed()
     }
 }
 

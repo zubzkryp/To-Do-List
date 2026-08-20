@@ -1,4 +1,4 @@
-export default function overdue(date) {
+export default function ifOverdue(date) {
     const currentDate = new Date()
     if(currentDate > date) {
         return true

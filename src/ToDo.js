@@ -1,4 +1,4 @@
-class ToDo {
+export default class ToDo {
     constructor(desc, date) {
         this.desc = desc
         this.completion = false
@@ -8,6 +8,4 @@ class ToDo {
      completed() {
        this.completion = !this.completion
      }
-
-       
 }

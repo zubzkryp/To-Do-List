@@ -1,10 +1,10 @@
 import './header.css'
 
 export default function buildHeader() {
-    const container = document.querySelector('#container')
+    const content = document.querySelector('#content')
     const header = document.createElement('div')
     header.classList.add('header') 
-    container.appendChild(header)
+    content.appendChild(header)
     const title = document.createElement('div')
     title.classList.add("header-title")
     header.appendChild(title)

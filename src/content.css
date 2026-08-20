@@ -1,0 +1,15 @@
+.add-task {
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    height: 30px;
+    width: 300px;
+}
+
+.content-addtask {
+    display: flex;
+    grid-row: 2 / 3;
+    
+    transform: translateY(50px);
+}

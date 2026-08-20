@@ -81,8 +81,9 @@ body {
     font-display: swap;
 }
 
-#container {
+#content {
   grid-column: 2 / 3;
   display: grid;
   grid-template-rows: 70px 1fr;
 }
+

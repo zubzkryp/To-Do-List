@@ -1,7 +1,8 @@
 import './content.css'
+import renderTasks from './renderTasks'
 
 
-export default function buildContent() {
+export default function buildContent(inbox) {
     const content = document.querySelector('#content')
     const contentaddTask = document.createElement('div')
     contentaddTask.classList.add('content-addtask')
@@ -62,11 +63,28 @@ export default function buildContent() {
     const submitBtn = document.createElement('button')
     submitBtn.type = 'submit'
     submitBtn.classList.add('submit-button')
+    submitBtn.textContent = "Submit"
     form.appendChild(submitBtn)
 
-    // form.addEventListener('submit', () => {
+    const closeformBTN = document.createElement('button')
+    closeformBTN.setAttribute('command', "close")
+    closeformBTN.setAttribute('commandfor', 'my-dialog')
+    form.appendChild(closeformBTN)
+    closeformBTN.classList.add('close-form')
+    closeformBTN.textContent = "Close"
+    closeformBTN.type = "button"
 
-    // })
+
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+        const description = document.querySelector('#Description').value
+        const date = document.querySelector('#Date').value
+
+        inbox.add(description, date)
+        renderTasks(inbox.tasks)
+        
+    })
 
     const printsTasks = document.createElement('div')
     printsTasks.classList.add('print-tasks')

@@ -16,3 +16,12 @@
 .print-tasks {
     grid-row: 3 / 4;
 }
+
+.close-form,
+.submit-button {
+    font-size: 12px;
+    width: 55px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: rgb(204, 229, 250);
+}

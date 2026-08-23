@@ -32,7 +32,7 @@ export default function buildContent(inbox) {
     descriptionHolder.classList.add('descriptionHolder')
     const descriptionLabel = document.createElement('label')
     descriptionLabel.htmlFor = 'Description'
-    descriptionLabel.textContent = 'Description'
+    descriptionLabel.textContent = 'Description:'
     const descInput = document.createElement('input')
     descInput.id = 'Description'
     descInput.type = 'text'
@@ -44,7 +44,7 @@ export default function buildContent(inbox) {
     dateHolder.classList.add('dateHolder')
     const dateLabel = document.createElement('label')
     dateLabel.htmlFor = 'Date'
-    dateLabel.textContent = 'Date'
+    dateLabel.textContent = 'Date:'
     const dateInput = document.createElement('input')
     dateInput.id = 'Date'
     dateInput.type = "date"
@@ -59,20 +59,26 @@ export default function buildContent(inbox) {
     form.appendChild(descriptionHolder)
     form.appendChild(dateHolder)
 
+    const formBtns = document.createElement('div')
+    formBtns.classList.add('form-buttons')
+    form.appendChild(formBtns)
     // submitting the form button
-    const submitBtn = document.createElement('button')
-    submitBtn.type = 'submit'
-    submitBtn.classList.add('submit-button')
-    submitBtn.textContent = "Submit"
-    form.appendChild(submitBtn)
 
     const closeformBTN = document.createElement('button')
     closeformBTN.setAttribute('command', "close")
     closeformBTN.setAttribute('commandfor', 'my-dialog')
-    form.appendChild(closeformBTN)
+    formBtns.appendChild(closeformBTN)
     closeformBTN.classList.add('close-form')
     closeformBTN.textContent = "Close"
     closeformBTN.type = "button"
+
+    const submitBtn = document.createElement('button')
+    submitBtn.type = 'submit'
+    submitBtn.classList.add('submit-button')
+    submitBtn.textContent = "Submit"
+    formBtns.appendChild(submitBtn)
+
+   
 
 
 

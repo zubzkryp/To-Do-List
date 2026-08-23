@@ -13,8 +13,47 @@
     transform: translateY(50px);
 }
 
-.print-tasks {
-    grid-row: 3 / 4;
+
+.close-task {
+    width: 25px;
+    height: 30px;
+    border-radius: 10px;
+    /* transform: translateY(-5px); */
+    font-size: 17px;
+}
+
+.form {
+    width: 350px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form > label {
+    transform: translateX(45px);
+}
+
+.form-buttons {
+    transform: translateY(30px);
+}
+
+
+.descriptionHolder,
+.dateHolder {
+    display: flex;
+    gap: 70px;
+    transform: translateY(15px);
+}
+
+#Date  {
+    transform: translateX(115px);
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
 }
 
 .close-form,
@@ -24,4 +63,30 @@
     height: 30px;
     border-radius: 15px;
     background-color: rgb(204, 229, 250);
+}
+
+.print-tasks {
+    grid-row: 3 / 4;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-items: center;
+    align-items: center;
+}
+
+
+.print-tasks > div {
+    display: flex;
+    gap: 8px;
+}
+
+.task-card {
+    /* background-color: #ffffffee; */
+    height: 100px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0 1px 3px rgba(0,0,0,0.1); */
+    border-radius: 25px
+
 }

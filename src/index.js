@@ -21,5 +21,5 @@ const today = new Project
 // inbox.tasks[0].completed()
 // inbox.tasks[0].completed()
 // console.log(ifOverdue(inbox.tasks[0].Date))
-// console.log(inbox)
+console.log(inbox)
 // console.log(today)

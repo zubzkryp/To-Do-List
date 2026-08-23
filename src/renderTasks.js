@@ -3,10 +3,13 @@ import './renderTasks.css'
 export default function renderTasks(tasks) {
     const content = document.querySelector('#content')
     const printTasks = document.querySelector('.print-tasks')
+    printTasks.textContent = ''
 
     tasks.forEach((element) => {
         // Create Taskcard which will store the description of the task and date
+        
         const taskCard = document.createElement('div')
+        taskCard.classList.add("task-card")
         printTasks.appendChild(taskCard)
 
         const descriptor = document.createElement('div')
@@ -14,6 +17,8 @@ export default function renderTasks(tasks) {
         const dateTask = document.createElement('div')
         dateTask.classList.add('date-task')
         const checkbox = document.createElement('input')
+        checkbox.classList.add('checkbox')
+        checkbox.required = 'true'
         checkbox.type = 'checkbox'
         checkbox.checked = element.completion
         const closeTaskBtn = document.createElement('button')
@@ -22,6 +27,7 @@ export default function renderTasks(tasks) {
 
         descriptor.textContent = element.desc 
         dateTask.textContent = element.date
+        closeTaskBtn.textContent = 'x'
         
         taskCard.appendChild(checkbox)
         taskCard.appendChild(descriptor)

@@ -1,0 +1,24 @@
+.close-task {
+    /* width: 35px;
+    height: 33px; */
+    border-radius: 10px;
+    transform: translateY(-2px);
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(255, 255, 255);
+}
+
+.close-task:hover {
+    background-color: aliceblue;
+}
+
+.date-task {
+    margin-left: 80px;
+}
+
+.task-card:hover {
+    background-color: aliceblue;
+    height: 50px;
+    width: 300px;
+}

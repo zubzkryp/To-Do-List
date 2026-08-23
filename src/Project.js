@@ -16,10 +16,7 @@ export default class Project {
             this.tasks.splice(index, 1)
         }
     }
-
-    completion() {
-        completed()
-    }
+       
 }
 
 

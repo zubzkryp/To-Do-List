@@ -1,11 +1,12 @@
 import './renderTasks.css'
 
-export default function renderTasks(tasks) {
+
+export default function renderTasks(project) {
     const content = document.querySelector('#content')
     const printTasks = document.querySelector('.print-tasks')
     printTasks.textContent = ''
 
-    tasks.forEach((element) => {
+    project.tasks.forEach((element) => {
         // Create Taskcard which will store the description of the task and date
         
         const taskCard = document.createElement('div')
@@ -24,6 +25,17 @@ export default function renderTasks(tasks) {
         const closeTaskBtn = document.createElement('button')
         closeTaskBtn.classList.add('close-task')
 
+        checkbox.addEventListener("change", (e) => {
+            element.completed() // Flips completion from true to false
+            project.remove(element) // We remove it from the array
+            renderTasks(project)  // We then call it again to show the new array
+            
+        })
+
+        closeTaskBtn.addEventListener('click', (e) => {
+            project.remove(element)
+            renderTasks(project)
+        })
 
         descriptor.textContent = element.desc 
         dateTask.textContent = element.date

@@ -1,5 +1,6 @@
 import './content.css'
 import renderTasks from './renderTasks'
+import ToDo from './ToDo'
 
 
 export default function buildContent(inbox) {
@@ -38,6 +39,7 @@ export default function buildContent(inbox) {
     descInput.type = 'text'
     descInput.placeholder = "Description of your task"
     descInput.name = 'inputDesc'
+    descInput.required = 'true'
 
     // date creation
     const dateHolder = document.createElement('div')
@@ -49,6 +51,8 @@ export default function buildContent(inbox) {
     dateInput.id = 'Date'
     dateInput.type = "date"
     dateInput.name = 'inputDate'
+    dateInput.required = 'true'
+    
     
     descriptionHolder.appendChild(descriptionLabel)
     descriptionHolder.appendChild(descInput)
@@ -78,23 +82,20 @@ export default function buildContent(inbox) {
     submitBtn.textContent = "Submit"
     formBtns.appendChild(submitBtn)
 
-   
-
-
 
     form.addEventListener('submit', (e) => {
         e.preventDefault()
         const description = document.querySelector('#Description').value
         const date = document.querySelector('#Date').value
-
         inbox.add(description, date)
-        renderTasks(inbox.tasks)
+        renderTasks(inbox)
         
     })
 
     const printsTasks = document.createElement('div')
     printsTasks.classList.add('print-tasks')
     content.appendChild(printsTasks)
+
 }
 
 

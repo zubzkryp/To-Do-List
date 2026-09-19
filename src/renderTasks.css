@@ -9,6 +9,8 @@
     background-color: rgb(255, 255, 255);
 }
 
+.checkbox
+
 .close-task:hover {
     background-color: aliceblue;
 }
@@ -22,3 +24,4 @@
     height: 50px;
     width: 300px;
 }
+

@@ -1,5 +1,5 @@
 import './renderTasks.css'
-
+import ifOverdue from './overdue'
 
 export default function renderTasks(project) {
     const content = document.querySelector('#content')
@@ -12,6 +12,8 @@ export default function renderTasks(project) {
         const taskCard = document.createElement('div')
         taskCard.classList.add("task-card")
         printTasks.appendChild(taskCard)
+
+      
 
         const descriptor = document.createElement('div')
         descriptor.classList.add('descriptor-task')
@@ -26,6 +28,7 @@ export default function renderTasks(project) {
         closeTaskBtn.classList.add('close-task')
 
         checkbox.addEventListener("change", (e) => {
+            console.log('checkbox clicked', element)
             element.completed() // Flips completion from true to false
             project.remove(element) // We remove it from the array
             renderTasks(project)  // We then call it again to show the new array

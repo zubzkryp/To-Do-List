@@ -11,6 +11,8 @@ buildHeader();
 buildSideBar();
 buildContent(inbox)
 
+  const currentDate = new Date()
+  console.log(typeof currentDate)
 
 const today = new Project
 

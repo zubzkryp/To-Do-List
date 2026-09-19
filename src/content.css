@@ -12,6 +12,7 @@
     display: flex;
     grid-row: 2 / 3;
     transform: translateY(50px);
+    height: 30px;
 }
 
 
@@ -63,7 +64,7 @@
 .print-tasks {
     grid-row: 3 / 4;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(30px, 50px));
     justify-items: center;
     align-items: center;
 }
@@ -76,8 +77,8 @@
 
 .task-card {
     /* background-color: #ffffffee; */
-    height: 100px;
-    width: 250px;
+    height: 50px;
+    width: inherit;
     display: flex;
     justify-content: center;
     align-items: center;

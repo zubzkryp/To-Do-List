@@ -82,6 +82,10 @@ export default function buildContent(inbox) {
     submitBtn.textContent = "Submit"
     formBtns.appendChild(submitBtn)
 
+    const printsTasks = document.createElement('div')
+    printsTasks.classList.add('print-tasks')
+    content.appendChild(printsTasks)
+
 
     form.addEventListener('submit', (e) => {
         e.preventDefault()
@@ -92,9 +96,7 @@ export default function buildContent(inbox) {
         
     })
 
-    const printsTasks = document.createElement('div')
-    printsTasks.classList.add('print-tasks')
-    content.appendChild(printsTasks)
+  
 
 }
 

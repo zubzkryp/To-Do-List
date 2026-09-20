@@ -40,6 +40,11 @@ export default function renderTasks(project) {
             renderTasks(project)
         })
 
+        if(ifOverdue(element.date)) {
+            taskCard.style.color = 'red'
+        }
+
+
         descriptor.textContent = element.desc 
         dateTask.textContent = element.date
         closeTaskBtn.textContent = 'x'

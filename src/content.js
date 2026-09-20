@@ -3,6 +3,7 @@ import renderTasks from './renderTasks'
 import ToDo from './ToDo'
 
 
+
 export default function buildContent(inbox) {
     const content = document.querySelector('#content')
     const contentaddTask = document.createElement('div')
@@ -86,6 +87,7 @@ export default function buildContent(inbox) {
     printsTasks.classList.add('print-tasks')
     content.appendChild(printsTasks)
 
+    const taskCard = document.querySelector('task-card')
 
     form.addEventListener('submit', (e) => {
         e.preventDefault()
@@ -93,6 +95,7 @@ export default function buildContent(inbox) {
         const date = document.querySelector('#Date').value
         inbox.add(description, date)
         renderTasks(inbox)
+        
         
     })
 

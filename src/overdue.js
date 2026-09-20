@@ -12,7 +12,7 @@ export default function ifOverdue(date) {
     // }
 
     const result = compareAsc(date, currentDate)
-    const overdue = 1
+    const overdue = -1
     if(result == overdue) {
         return true
     }

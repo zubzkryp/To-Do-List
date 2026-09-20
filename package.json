@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/zubzkryp/To-Do-List#readme",
   "dependencies": {
+    "date-fns": "^4.4.0",
     "lucide": "1.31.0"
   }
 }

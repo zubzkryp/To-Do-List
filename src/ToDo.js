@@ -8,4 +8,8 @@ export default class ToDo {
      completed() {
        this.completion = !this.completion
      }
-}
+
+     getDate() {
+      return this.date
+     }
+} 

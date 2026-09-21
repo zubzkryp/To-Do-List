@@ -1,9 +1,12 @@
+import { filterToday, filterWeek } from './filterTasks'
+import { renderPeriod, renderTasks, renderToday } from './renderTasks'
 import './sidebar.css'
 import { createElement, Menu, ChevronsRight, ListChecks, Logs, SlidersHorizontal, LogOut } from 'lucide'
+import Project from './Project'
 
-export default function buildSideBar() {
+export default function buildSideBar(inbox) {
     const body = document.querySelector('body')
-    const container = document.querySelector('#container')
+    const content = document.querySelector('#content')
     const sideBar = document.createElement("div")
     sideBar.id = 'side-bar'
     body.appendChild(sideBar)
@@ -38,10 +41,10 @@ export default function buildSideBar() {
     //buttons to view list
     const inboxIcon = createElement(ChevronsRight) // icon for upcoming text
     dashboardInbox.appendChild(inboxIcon)
-    const inbox = document.createElement('button')
-    inbox.classList.add("inbox")
-    inbox.textContent = "Inbox"
-    dashboardInbox.appendChild(inbox)
+    const inboxBTN = document.createElement('button')
+    inboxBTN.classList.add("inboxBTN")
+    inboxBTN.textContent = "Inbox"
+    dashboardInbox.appendChild(inboxBTN)
 
     // today tasks
     const dashboardToday = document.createElement('div')
@@ -103,5 +106,17 @@ export default function buildSideBar() {
     signout.textContent = "Sign Out"
     dashboardSignOut.appendChild(signout)
 
-    
+    dashboardInbox.addEventListener('click', (e) => {
+        renderTasks(inbox)
+    })
+
+    dashboardToday.addEventListener('click', (e) => {
+        const todayProject = filterToday(inbox)
+        renderPeriod(todayProject)
+    })
+
+    dashboardWeek.addEventListener('click', (e) => {
+        const weekProject = filterWeek(inbox)
+        renderPeriod(weekProject)
+    })
 }

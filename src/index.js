@@ -10,12 +10,11 @@ import { format } from "date-fns";
 const inbox = new Project();
 window.inbox = inbox
 
-window.ifOverdue = ifOverdue
-window
 
 buildHeader();
-buildSideBar();
+buildSideBar(inbox);
 buildContent(inbox)
+
 
   const currentDate = format(new Date(), 'yyyy-MM-dd') 
   console.log(typeof currentDate)

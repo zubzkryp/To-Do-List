@@ -1,8 +1,7 @@
 import './content.css'
-import renderTasks from './renderTasks'
 import ToDo from './ToDo'
-
-
+import ifOverdue from './overdue'
+import { renderTasks } from './renderTasks'
 
 export default function buildContent(inbox) {
     const content = document.querySelector('#content')
@@ -95,8 +94,6 @@ export default function buildContent(inbox) {
         const date = document.querySelector('#Date').value
         inbox.add(description, date)
         renderTasks(inbox)
-        
-        
     })
 
   

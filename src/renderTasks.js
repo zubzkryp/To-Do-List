@@ -84,14 +84,16 @@ export function renderPeriod(tasks) {
         checkbox.addEventListener("change", (e) => {
             console.log('checkbox clicked', element)
             element.completed() // Flips completion from true to false
-            project.remove(element) // We remove it from the array
-            renderTasks(project)  // We then call it again to show the new array
+            const index = tasks.indexOf(element) 
+            tasks.splice(index, 1)// We remove it from the array
+            renderPeriod(tasks)  // We then call it again to show the new array
             
         })
 
         closeTaskBtn.addEventListener('click', (e) => {
-            project.remove(element)
-            renderTasks(project)
+            const index = tasks.indexOf(element) 
+            tasks.splice(index, 1)// We remove it from the array
+            renderPeriod(tasks)
         })
 
         if(ifOverdue(element.date)) {

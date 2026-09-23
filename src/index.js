@@ -7,7 +7,7 @@ import buildContent from './content';
 import { format } from "date-fns";
 
 
-const inbox = new Project();
+export const inbox = new Project();
 window.inbox = inbox
 
 

@@ -93,7 +93,7 @@ export default function buildContent(inbox) {
         const description = document.querySelector('#Description').value
         const date = document.querySelector('#Date').value
         inbox.add(description, date)
-        renderTasks(inbox)
+        renderTasks(inbox.tasks)
     })
 
   

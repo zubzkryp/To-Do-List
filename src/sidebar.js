@@ -3,6 +3,7 @@ import { renderPeriod, renderTasks, renderToday } from './renderTasks'
 import './sidebar.css'
 import { createElement, Menu, ChevronsRight, ListChecks, Logs, SlidersHorizontal, LogOut } from 'lucide'
 import Project from './Project'
+import { inbox } from './index'
 
 export default function buildSideBar(inbox) {
     const body = document.querySelector('body')
@@ -107,16 +108,16 @@ export default function buildSideBar(inbox) {
     dashboardSignOut.appendChild(signout)
 
     dashboardInbox.addEventListener('click', (e) => {
-        renderTasks(inbox)
+        renderTasks(inbox.tasks, inbox)
     })
 
     dashboardToday.addEventListener('click', (e) => {
         const todayProject = filterToday(inbox)
-        renderPeriod(todayProject)
+        renderTasks(todayProject, inbox)
     })
 
     dashboardWeek.addEventListener('click', (e) => {
         const weekProject = filterWeek(inbox)
-        renderPeriod(weekProject)
+        renderTasks(weekProject, inbox)
     })
 }
